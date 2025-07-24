@@ -3,6 +3,7 @@ path=input("Enter the path of the log file: ")
 dossier="/Users/test/Desktop/folder1"
 error=os.path.join(dossier,"error.txt")
 warning=os.path.join(dossier,"warning.txt") # joining a path
+
 if not os.path.isfile(path):
        print("file does not exist")
 else :
@@ -12,6 +13,6 @@ else :
                   open(error,"a").write(line)
                   print(line)
               if "WARNING" in line:
-                  print(line)
                   open(warning,"a").write(line)
+                  print(line)
 print("done")
